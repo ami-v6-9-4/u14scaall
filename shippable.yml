@@ -4,10 +4,8 @@ runtime:
   nodePool: dynamic__x86_64__Ubuntu_14_04__c4_large
   
 scala:
-  - 2.9.3
-  - 2.10.7
   - 2.11.12
-  - 2.12.4
+  - 2.12.6
 
 jdk:
   - openjdk7
@@ -17,7 +15,11 @@ jdk:
   - oraclejdk9
     
 build:
-
+  pre_ci_boot:
+    image_name: drydock/u14scaall
+    image_tag: v6.5.4
+    pull: true
+    
   ci:
     - java -version
     - echo $SHIPPABLE_SCALA_VERSION
