@@ -18,7 +18,7 @@ jdk:
 build:
   pre_ci_boot:
     image_name: drydock/u14scaall
-    image_tag: v6.8.4
+    image_tag: v6.8.4 
     pull: true
     
   ci:
